@@ -1,24 +1,60 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import { getBasicHeroInfoById } from './requests.js';
+import Nav from './Components/Nav/Nav.js';
 import './App.css';
 
+const featuredHeroesIds = [247,263,71,69,491];
+
 function App() {
+  useEffect(() => {
+    fetchAndRenderFeaturedHeroes();
+  }, []);
+
+  const [featuredHeroesList, setFeaturedHeroesList] = useState([]);
+
+  const fetchAndRenderFeaturedHeroes = async () => {
+    let heroes = [];
+    for (const heroId of featuredHeroesIds) {
+      const data = await getBasicHeroInfoById(heroId);
+      heroes.push(data);
+    }
+    setFeaturedHeroesList(heroes)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Nav></Nav>
+    <main>
+      <section className='featured'>
+        { featuredHeroesList.map( ({ name, imgUrl, powerStats}) => 
+          <div className='featured__hero'>
+            <h2>{name}</h2>
+            <img src={imgUrl} alt={ `${name}`} />
+            <div className='featured__hero_stats'>
+              <div>
+                <p>{powerStats.combat}</p>
+              </div>
+              <div>
+                <p>{powerStats.durability}</p>
+              </div>
+              <div>
+                <p>{powerStats.intelligence}</p>
+              </div>
+              <div>
+                <p>{powerStats.speed}</p>
+              </div>
+              <div>
+                <p>{powerStats.strength}</p>
+              </div>
+              
+          
+            </div>
+          </div>
+        )}
+      </section>
+    </main>
+    <footer></footer>
+    </>
   );
 }
 

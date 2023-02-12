@@ -1,0 +1,16 @@
+.btn {
+    background-color: coral;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 6px;
+}
+
+.btn--medium {
+    padding: 10px 20px;
+}
+
+.btn--large {
+    padding: 15px 25px;
+    font-size: 150%;
+}
