@@ -1,16 +1,41 @@
-.btn {
-    background-color: coral;
+.nav {
+    height: 80px;
+    background-color: black;
     color: white;
-    font-weight: bold;
+  }
+  
+  .nav .container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav a {
+    font-size: 130%;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav__logo {
+    width: 140px;
+  }
+  
+  .nav__search input {
+    height: 30px;
     border: none;
-    padding: 6px;
-}
-
-.btn--medium {
-    padding: 10px 20px;
-}
-
-.btn--large {
-    padding: 15px 25px;
-    font-size: 150%;
-}
+    border-radius: 8px;
+  }
+  
+  .nav__search button {
+    height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .nav__search input, .nav__search button {
+    height: 30px;
+    padding: 3px 5px;
+  }
+  
