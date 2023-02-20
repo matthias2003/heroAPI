@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './Nav.css';
 
 function Nav() {
-    const [searchInputValue, setSearchInputValue] = useState('');
+    const [ searchInputValue, setSearchInputValue ] = useState('');
 
     return (
         <nav className="nav">

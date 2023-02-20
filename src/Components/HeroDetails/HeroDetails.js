@@ -1,6 +1,5 @@
 import React from 'react';
-import * as icon from '../../assets/icons';
-import './HeroSimplified.css';
+import './HeroDetails.css';
 
     
 function HeroDetails() {

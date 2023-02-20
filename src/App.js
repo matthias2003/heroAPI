@@ -4,6 +4,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
 import HeroesFeatured from './Components/HeroesFeatured/HeroesFeatured.js';
 import SearchView from './Components/SearchView/SearchView.js';
+import HeroDetails from './Components/HeroDetails/HeroDetails.js'
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
             </Route>
             <Route path='/search/:name' element={<SearchView />}>
             </Route>
-            <Route path='/hero/:id'>
+            <Route path='/hero/:id' element={<HeroDetails />}>
             </Route>
           </Routes >
         </div>
