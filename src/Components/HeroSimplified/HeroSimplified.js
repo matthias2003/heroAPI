@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './HeroSimplified.css';
 
     
-function HeroSimplified({name, imgUrl, powerStats, id}) {
+function HeroSimplified({name, imgUrl, powerstats, id}) {
     return (
           <div className='featured__hero'>
             <h2>{name}</h2>
@@ -12,28 +12,27 @@ function HeroSimplified({name, imgUrl, powerStats, id}) {
             <div className='featured__hero__stats'>
               <div>
                 <img className='featured__hero__stats__icon' src={icon.boxingIcon} alt='Combat icon'/>
-                <p>{powerStats.combat}</p>
+                <p>{powerstats.combat}</p>
               </div>
               <div>
               <img className='featured__hero__stats__icon' src={icon.durableIcon} alt='Durability icon'/>
-                <p>{powerStats.durability}</p>
+                <p>{powerstats.durability}</p>
               </div>
               <div>
               <img className='featured__hero__stats__icon' src={icon.thinkingIcon} alt='Intelligence icon'/>
-                <p>{powerStats.intelligence}</p>
+                <p>{powerstats.intelligence}</p>
               </div>
               <div>
               <img className='featured__hero__stats__icon' src={icon.speedometerIcon} alt='Speed icon'/>
-                <p>{powerStats.speed}</p>
+                <p>{powerstats.speed}</p>
               </div>
               <div>
               <img className='featured__hero__stats__icon' src={icon.fistIcon} alt='Strength icon'/>
-                <p>{powerStats.strength}</p>
+                <p>{powerstats.strength}</p>
               </div>
             </div>
           </div>
     );
-
 }
 
 export default HeroSimplified;
