@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import Loader from "../Loader/Loader.js";
 import { getTotalHeroInfoById } from '../../requests.js';
 import './HeroDetails.css';
+import Powerstats from '../Powerstats/Powerstats.js';
 
     
 function HeroDetails() {
@@ -30,7 +31,7 @@ function HeroDetails() {
                 <div className='detailed__hero'>
                     <h2>{detailedHeroesList.name}</h2> 
                     <img className='featu' src={detailedHeroesList.image.url} alt='Intelligence icon'/>
-                    
+                    <Powerstats powerstats={detailedHeroesList.powerstats}></Powerstats>
                 </div>
             )}
             { isLoading && <div className="loader-container"><Loader /></div> }

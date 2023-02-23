@@ -1,8 +1,8 @@
 import React from 'react';
 import * as icon from '../../assets/icons';
-import './HeroSimplified.css';
+import './Powerstats.css';
 
-function Powerstats({name, imgUrl, powerstats, id}) {
+function Powerstats({ powerstats }) {
     return (
         <div className='featured__hero__stats'>
             <div>
