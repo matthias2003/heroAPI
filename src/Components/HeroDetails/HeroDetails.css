@@ -1,0 +1,31 @@
+.detailed__hero h2 {
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+
+.detailed__hero {
+    position: relative;
+    width: 100%;
+    margin-bottom:4%;
+    border-radius: 20px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.25);
+    transition: transform 0.5s ease-in-out;
+    background-color: white;
+  }
+
+  .detailed__hero__img {
+    position: relative;
+    display: block;
+    width: 45%;
+    margin: 0 auto 30px;
+    border-radius: 20px;
+  }
+
+  .detailed__hero p {
+    padding: 0 20px;
+  }
+
+  .detailed__hero p:last-child {
+    padding-bottom: 30px;
+  }
