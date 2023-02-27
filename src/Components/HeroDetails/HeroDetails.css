@@ -29,3 +29,18 @@
   .detailed__hero p:last-child {
     padding-bottom: 30px;
   }
+
+  .detailed__hero__stats {
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .detailed__hero__stats__icon {
+    width: 25px;
+    margin-bottom: 10px;
+  }
