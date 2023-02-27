@@ -6,6 +6,7 @@ function Powerstats({ powerstats }) {
     return (
         <div className='hero__stats'>
             <div>
+            {console.log(powerstats)}
                 <img className='hero__stats__icon' src={icon.boxingIcon} alt='Combat icon'/>
                 <p>{powerstats.combat}</p>
             </div>
