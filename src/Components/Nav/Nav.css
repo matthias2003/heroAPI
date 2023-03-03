@@ -22,20 +22,31 @@
   .nav__logo {
     width: 250px;
   }
-  
+
+  .nav__search {
+    display: flex;
+  }
+
   .nav__search input {
     height: 30px;
-    margin-right: 10px;
     border: none;
     border-radius: 20px;
-    padding: 0 5px 0 5px;
+    padding-left: 10px ;
+    padding-right: 35px;
+    width: 60%;
+  }
+
+  .nav__search input:focus {
+    outline: none;
   }
   
   .nav__search button {
-    height: 30px;
+    height: 32px;
     border-radius: 20px;
     background: #5E5DF0;
     color: white;
     border: none;
-    padding: 0 10px 0 10px;
+    margin-left: -30px;
+    padding: 0 10px;
   }
+  

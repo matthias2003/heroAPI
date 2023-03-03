@@ -29,7 +29,7 @@ function SearchView() {
         <>
         { !isLoading && 
             (<section className="search">
-                {searchList.map(({name,powerstats,image, id}) => <HeroSimplified key={id} name={name} imgUrl={image.url} powerStats={powerstats} id={id}/>)}
+                {searchList.map(({name,powerstats,image, id}) => <HeroSimplified key={id} name={name} imgUrl={image.url} powerstats={powerstats} id={id}/>)}
             </section>)
         } { isLoading && <div className="loader-container"><Loader /></div> }
         </>
