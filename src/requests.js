@@ -13,5 +13,6 @@ export const searchHeroesByName = async (name) => {
 }
 
 export const getTotalHeroInfoById = async (id) => {
-   return await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}`);
+    const { data } = await axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}`);
+    return data;
 }
