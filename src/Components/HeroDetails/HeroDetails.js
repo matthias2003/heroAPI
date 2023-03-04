@@ -18,7 +18,7 @@ function HeroDetails() {
     },[id])
 
     const fetchDetailedHero = async () => {
-        const { data } = await getTotalHeroInfoById(id);
+        const data  = await getTotalHeroInfoById(id);
         setDetailedHero(data);
         setLoadingState(false);
     }
