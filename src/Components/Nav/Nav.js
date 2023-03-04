@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from '../../assets/img/nav_logo.png'
 import { Link } from "react-router-dom";
-import search from "./search-interface-symbol.png";
+import search from "../../assets/icons/search.png";
 import './Nav.css';
 
 function Nav() {

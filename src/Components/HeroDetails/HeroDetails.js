@@ -51,25 +51,24 @@ function HeroDetails() {
                         <h2>Appearance</h2>
                         {Object.keys(detailedHero.appearance).map((key) => {
                             if (key === "height" || key === "weight") {
-                               return <p>{formatKeys(key)}: {detailedHero.appearance[key][0]} / {detailedHero.appearance[key][1]}</p>
+                               return <p key={detailedHero.id+key}>{formatKeys(key)}: {detailedHero.appearance[key][0]} / {detailedHero.appearance[key][1]}</p>
                             } else {
-                                return <p>{formatKeys(key)}: {detailedHero.appearance[key]}</p>
+                                return <p key={detailedHero.id+key}>{formatKeys(key)}: {detailedHero.appearance[key]}</p>
                             }
                         })}
                     </div>
 
                     <div className='detailed__hero__biography'>
                         <h2>Biography</h2>
-
-                        {Object.keys(detailedHero.biography).map((key) => (<p>{formatKeys(key)}: { detailedHero.biography[key]}</p>))}
+                        {Object.keys(detailedHero.biography).map((key) => (<p key={detailedHero.id+key}>{formatKeys(key)}: { detailedHero.biography[key]}</p>))}
                     </div>
                     <div className='detailed__hero__connections'>
                         <h2>Connections</h2>
-                        {Object.keys(detailedHero.connections).map((key) => (<p>{formatKeys(key)}: {detailedHero.connections[key]}</p>))}
+                        {Object.keys(detailedHero.connections).map((key) => (<p key={detailedHero.id+key}>{formatKeys(key)}: {detailedHero.connections[key]}</p>))}
                     </div>
                     <div className='detailed__hero__work'>
                         <h2>Work</h2>
-                        {Object.keys(detailedHero.work).map((key) => (<p>{formatKeys(key)}: {detailedHero.work[key]}</p>))}
+                        {Object.keys(detailedHero.work).map((key) => (<p key={detailedHero.id+key}>{formatKeys(key)}: {detailedHero.work[key]}</p>))}
                     </div>
                 </div>
             )}
