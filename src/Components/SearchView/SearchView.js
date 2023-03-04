@@ -26,6 +26,7 @@ function SearchView() {
             const { results } = data;
             setSearchContent(results);
             setLoadingState(false);
+            setSearchError('');
         });
     },[name])
 
