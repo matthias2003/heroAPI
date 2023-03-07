@@ -16,10 +16,12 @@ export default  function HeroesFeatured() {
 
       const fetchAndRenderFeaturedHeroes = async () => {
         let heroes = [];
+        
         for (const heroId of featuredHeroesIds) {
           const data = await getBasicHeroInfoById(heroId);
           heroes.push(data);
         }
+        
         setFeaturedHeroesList(heroes);
         setLoadingState(false);
       }

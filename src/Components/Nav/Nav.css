@@ -28,6 +28,8 @@
   }
 
   .nav__search input {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: 300;
     height: 30px;
     border: none;
     border-radius: 20px;

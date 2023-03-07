@@ -14,10 +14,10 @@ function HeroDetails() {
 
     useEffect(() => {
         setLoadingState(true);
-        fetchDetailedHero();
+        fetchDetailedHero(id);
     },[id])
 
-    const fetchDetailedHero = async () => {
+    const fetchDetailedHero = async (id) => {
         const data  = await getTotalHeroInfoById(id);
         setDetailedHero(data);
         setLoadingState(false);
