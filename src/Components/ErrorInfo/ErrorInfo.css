@@ -2,3 +2,13 @@
     display: flex;
     justify-content: center;
 }
+
+.error_info__text {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+.error_info__text h4 {
+    margin: 0;
+}
