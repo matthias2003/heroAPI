@@ -9,8 +9,10 @@ function Nav() {
     const navigate = useNavigate();
 
     const searchRedirect = (event) => {
-        setSearchInputValue(event.target.value);
-        navigate(`/search/${searchInputValue}`);
+        if (event.target.value) {
+            setSearchInputValue(event.target.value);
+            navigate(`/search/${searchInputValue}`);
+        }
     }
 
     return (
@@ -20,7 +22,7 @@ function Nav() {
                 <div className="nav__search">
                     <input onChange={event => { setSearchInputValue(event.target.value)}} value={searchInputValue} type="text" name="search" placeholder="Search hero"
                            onKeyDown={event => { if (event.key === "Enter") {searchRedirect(event)}}}></input>
-                    <Link to={`/search/${searchInputValue}`}><button><img src={search} alt="Search icon" /></button></Link>
+                <Link to={`/search/${searchInputValue}`}><button><img src={search} alt="Search icon" /></button></Link>
                 </div> 
             </div>
         </nav>

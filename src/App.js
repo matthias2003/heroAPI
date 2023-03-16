@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
 import HeroesFeatured from './Components/HeroesFeatured/HeroesFeatured.js';
 import SearchView from './Components/SearchView/SearchView.js';
 import HeroDetails from './Components/HeroDetails/HeroDetails.js'
-import ErrorInfo from './Components/ErrorInfo/ErrorInfo.js';
 
 function App() {
   return (
@@ -19,8 +18,14 @@ function App() {
             </Route>
             <Route path='/search/:name' element={<SearchView />}>
             </Route>
-            <Route path='/search/' element={<ErrorInfo />}> {/*TODO: doszlifować to! i error sie nie wyświetla na stronie */}
+
+
+
+            <Route path='/search/' element={<HeroesFeatured />}>
             </Route>
+
+
+
             <Route path='/hero/:id' element={<HeroDetails />}>
             </Route>
           </Routes >
