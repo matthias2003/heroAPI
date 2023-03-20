@@ -18,14 +18,6 @@ function App() {
             </Route>
             <Route path='/search/:name' element={<SearchView />}>
             </Route>
-
-
-
-            <Route path='/search/' element={<HeroesFeatured />}>
-            </Route>
-
-
-
             <Route path='/hero/:id' element={<HeroDetails />}>
             </Route>
           </Routes >
