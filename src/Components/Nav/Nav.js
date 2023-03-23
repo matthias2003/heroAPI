@@ -14,19 +14,14 @@ function Nav() {
         }
     }   
 
-
-    
     return (
         <nav className="nav">
             <div className="container">
-                <Link to="/"><img className="nav__logo" src={logo} alt="Superhero Database" /></Link>
+                <Link to="/"><img className="nav__logo" src={logo} alt="Superhero Database" onClick={() => setSearchInputValue('')}/></Link>
                 <div className="nav__search">
-
                         <input onChange={event => { setSearchInputValue(event.target.value)}} value={searchInputValue} type="text" name="search" placeholder="Search hero"
                            onKeyDown={event => { if (event.key === "Enter") {searchHandle(searchInputValue)}}}></input>
-                
                         <button onClick={() => searchHandle(searchInputValue)}><img src={search} alt="Search icon" /></button>
-
                 </div> 
             </div>
         </nav>

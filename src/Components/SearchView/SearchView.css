@@ -3,3 +3,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media (min-width: 1200px) {
+  .search::after {
+    content: "";
+    width: 32%;
+  }
+}
+
