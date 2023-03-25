@@ -14,18 +14,15 @@ function App() {
       <main>
         <div className='container'>
           <Routes >
-            <Route exact path='/' element={<HeroesFeatured />}>
-            </Route>
-            <Route path='/search/:name' element={<SearchView />}>
-            </Route>
-            <Route path='/hero/:id' element={<HeroDetails />}>
-            </Route>
+            <Route exact path='/' element={<HeroesFeatured />} />
+            <Route path='/search/:name' element={<SearchView />} />
+            <Route path='/hero/:id' element={<HeroDetails />} />
           </Routes >
         </div>
       </main> 
       <footer>
-        <div className="container">
-          <p>This content is kindly provided by <a href="https://www.superheroapi.com/">Superhero API</a></p>
+        <div className='container'>
+          <p>This content is kindly provided by <a href='https://www.superheroapi.com/'>Superhero API</a></p>
         </div>
       </footer>
       </Router>

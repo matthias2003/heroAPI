@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from "react-router";
-import Loader from "../Loader/Loader.js";
+import { useParams } from 'react-router';
+import Loader from '../Loader/Loader.js';
 import { getTotalHeroInfoById } from '../../requests.js';
 import * as icon from '../../assets/icons/index.js'
 import './HeroDetails.css';
 
-
-    
 function HeroDetails() {
     const { id } = useParams();
     const [ isLoading, setLoadingState] = useState(true);
@@ -28,7 +26,6 @@ function HeroDetails() {
         return str.charAt(0).toUpperCase() + str.slice(1);
       };
     
-
     return (
         <section className='detailed'>
             { !isLoading && ( 
@@ -50,14 +47,13 @@ function HeroDetails() {
                     <div className='detailed__hero__appearance'>
                         <h2>Appearance</h2>
                         {Object.keys(detailedHero.appearance).map((key) => {
-                            if (key === "height" || key === "weight") {
+                            if (key === 'height' || key === 'weight') {
                                return <p key={detailedHero.id+key}>{formatKeys(key)}: {detailedHero.appearance[key][0]} / {detailedHero.appearance[key][1]}</p>
                             } else {
                                 return <p key={detailedHero.id+key}>{formatKeys(key)}: {detailedHero.appearance[key]}</p>
                             }
                         })}
                     </div>
-
                     <div className='detailed__hero__biography'>
                         <h2>Biography</h2>
                         {Object.keys(detailedHero.biography).map((key) => (<p key={detailedHero.id+key}>{formatKeys(key)}: { detailedHero.biography[key]}</p>))}
@@ -72,7 +68,7 @@ function HeroDetails() {
                     </div>
                 </div>
             )}
-            { isLoading && <div className="loader-container"><Loader /></div> }
+            { isLoading && <div className='loader-container'><Loader /></div> }
         </section>
     );
 }
