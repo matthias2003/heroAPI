@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
+![heroApp-min](https://github.com/matthias2003/heroApp/assets/56407111/626bedd7-d2ab-47fa-8add-60c6cedc6b9f)
 ## Available Scripts
 
 In the project directory, you can run:
