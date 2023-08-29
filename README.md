@@ -2,7 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![heroApp](https://github.com/matthias2003/heroApp/assets/56407111/7a6b0205-505e-40a5-88ed-cb05ce30d044)
 
 ## Available Scripts
 
