@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+
+![heroApp-small](https://github.com/matthias2003/heroApp/assets/56407111/d39a20f5-e7c8-4bdd-81ed-a7e60e40992e)
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![heroApp-min](https://github.com/matthias2003/heroApp/assets/56407111/626bedd7-d2ab-47fa-8add-60c6cedc6b9f)
