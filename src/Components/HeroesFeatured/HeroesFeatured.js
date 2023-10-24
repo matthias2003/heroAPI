@@ -4,8 +4,6 @@ import HeroSimplified from "../HeroSimplified/HeroSimplified.js";
 import Loader from "../Loader/Loader.js";
 import './HeroesFeatured.css';
 
-const featuredHeroesIds = [70,265,298,491,542,546];
-
 export default  function HeroesFeatured() {
     useEffect(() => {
         fetchAndRenderFeaturedHeroes();
@@ -16,13 +14,11 @@ export default  function HeroesFeatured() {
 
       const fetchAndRenderFeaturedHeroes = async () => {
         let heroes = [];
+
+        const data = await getBasicHeroInfoById();
+        heroes.push(data);
         
-        for (const heroId of featuredHeroesIds) {
-          const data = await getBasicHeroInfoById(heroId);
-          heroes.push(data);
-        }
-        
-        setFeaturedHeroesList(heroes);
+        setFeaturedHeroesList(data);
         setLoadingState(false);
       }
 
