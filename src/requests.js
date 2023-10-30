@@ -10,6 +10,6 @@ export const searchHeroesByName = async (name) => {
 }
 
 export const getTotalHeroInfoById = async (id) => {
-    const { data } = await axios.get(`https://hero-app-server-proxy.vercel.app/details/${name}`)
+    const { data } = await axios.get(`https://hero-app-server-proxy.vercel.app/details/${id}`)
     return data;
 }
