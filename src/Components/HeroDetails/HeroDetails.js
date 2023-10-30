@@ -27,7 +27,7 @@ function HeroDetails() {
         str = str.replace('-',' ');
         return str.charAt(0).toUpperCase() + str.slice(1);
       };
-    
+
 
     return (
         <section className='detailed'>
